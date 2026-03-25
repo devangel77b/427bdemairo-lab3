@@ -1,0 +1,9 @@
+1. This is a review of the manuscript "Examining energy storage and work done by elastic jumping poppers" by Sharma, DeMairo, Liddawi, and Dolgin. I recommend minor revisions as shown on the markup.
+
+2. The manuscript is mostly clean; but the figures and results and discussion talk about the effect of what face (happy, sad, etc) has on energy. This is not at all in the hypotheses or introduction or abstract. If the group examined it as an extra investigation, that is fine, but it should be perhaps handled separate as a separate section or subsection or something done to eliminate a possible factor affecting energy? As it is now it pops (pun intended) out of nowhere and is rather confusing why face is all of a sudden a factor.
+
+3. Regarding the face investigation, it seems like there was only n=1 of each face tried, so the statistics / error bars shown purporting to test about the effect of face are rather misleading.
+
+4. The methods are lacking some detail and a picture or diagram might really help the explanation. Software packages like Tracker should be cited properly.
+
+5. It looks like the figures were done in Matplot lib. Authors should consider making their code available in a Github repository along with the data. For the Matlplotlib figures they should make the figures sized for 1 column and remove the title, which is taken care of by the caption required for each plot. 
