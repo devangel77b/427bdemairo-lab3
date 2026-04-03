@@ -3,6 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 plt.rcParams['text.usetex']=False # added by DrE for latex includesvg
 plt.rcParams['svg.fonttype']='none' # added by DrE for latex includesvg
+plt.rcParams['font.size']=8
 from pathlib import Path
 
 """
