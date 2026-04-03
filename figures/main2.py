@@ -33,9 +33,9 @@ crying_force = np.array([0, 200, 340, 420, 580, 720, 810, 680, 580, 500])/1000.*
 
 plt.figure(figsize=(3.4167,2),dpi=600)
 
-plt.plot(x_disp, heart_force, color='green', marker='s', linewidth=2, markersize=8, label='heart')
-plt.plot(x_disp, shocked_force, color='purple', marker='o', linewidth=2, markersize=8, label='shocked')
-plt.plot(x_disp, crying_force, color='orange', marker='^', linewidth=2, markersize=8, label='crying')
+plt.plot(x_disp, heart_force, color='green', marker='s', linewidth=1.4, markersize=4.2, label='heart')
+plt.plot(x_disp, shocked_force, color='purple', marker='o', linewidth=1.4, markersize=4.2, label='shocked')
+plt.plot(x_disp, crying_force, color='orange', marker='^', linewidth=1.4, markersize=4.2, label='crying')
 
 #plt.title("Displacement vs Force")
 #plt.xlabel("Scissor Jack compression displacement (starting from 8.5) (mm)")
@@ -47,8 +47,8 @@ plt.xticks(x_disp)
 #plt.yticks(np.arange(0, 1100, 200))
 #plt.ylim(0, 1000)
 
-plt.grid(True, linestyle='-', linewidth=0.5, color='black', alpha=0.3)
-
+#plt.grid(True, linestyle='-', linewidth=0.5, color='black', alpha=0.3)
+plt.grid(True)
 plt.legend() #loc='best', bbox_to_anchor=(1, 0.5))
 
 #save_figure("graph_1_force_vs_displacement")
