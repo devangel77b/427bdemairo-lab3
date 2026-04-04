@@ -80,37 +80,56 @@ This experiment investigated energy storage and work done in elastic jumping pop
 %The current column width is \the\columnwidth
 
 \section{Introduction}
-Elastic materials store energy when deformed and release that energy when allowed to return toward an equilibrium configuration. While many elastic systems are well approximated by linear force--displacement relationships, real materials often exhibit nonlinear behavior. One important form of nonlinearity is snap-through instability, in which increasing deformation leads to a maximum restoring force followed by a sudden decrease as the system rapidly transitions into a new geometric configuration. This behavior is characteristic of thin shells and domed elastic structures, including the poppers used in this experiment. During snap-through, elastic potential energy is released abruptly, and the structure’s internal resistance drops even as displacement increases, producing rapid motion that cannot be accurately described using simple linear elastic models. 
+Elastic materials store energy when deformed and release that energy when allowed to return toward an equilibrium configuration. While many elastic systems are well approximated by linear force--displacement relationships, real materials and structures often exhibit nonlinear behavior. One important form of nonlinearity is snap-through instability, in which increasing deformation leads to a maximum restoring force followed by a sudden decrease as the system rapidly transitions into a new geometric configuration. This behavior is characteristic of thin shells and domed elastic structures, including the poppers used in this experiment. During snap-through, elastic potential energy is released abruptly, and the structure’s internal resistance drops even as displacement increases, producing rapid motion that cannot be accurately described using simple linear elastic models. \textbf{CITATIONS}
 
-The concepts of energy conservation and work provide a more general framework for analyzing such systems. Mechanical energy exists in multiple forms, including kinetic energy $KE = \frac{1}{2}mv^2$ and gravitational potential energy, $U_g = mgh$. In ideal systems, the total mechanical energy remains constant. When an elastic object is compressed, work is done on the system and stored as elastic potential energy, which may later be converted into kinetic and gravitational energy. For systems with variable force, the work done is given by the integral:
-$$W = \int F(x)dx$$
+The concepts of energy conservation and work provide a more general framework for analyzing such systems. Mechanical energy exists in multiple forms, including kinetic energy $\text{KE} = \frac{1}{2}mv^2$ and gravitational potential energy, $\text{GPE} = mgh$. In ideal systems, the total mechanical energy remains constant. When an elastic object is compressed, mechanical work is done on the system and stored as elastic potential energy, which may later be converted into kinetic and gravitational energy. For 1D systems with variable force, the work done is given by the integral:
+\begin{equation}
+W = \int F(x)dx
+\end{equation}
+According to the work-energy theorem, the net work done on a system is approximately equal to the change in its mechanical energy, allowing independent experimental measurements of work and mechanical energy to be directly compared \cite{halliday,tipler,barrons,openstax}.
 
-According to the work-energy theorem, the net work done on a system is approximately equal to the change in its mechanical energy, allowing independent experimental measurements of work and mechanical energy to be directly compared \cite{halliday}.
+The purpose of this experiment was to test the general concept of energy conservation, and to analyze rubber jumping poppers as nonlinear elastic systems by (1) measuring maximum gravitational potential energy during launch using video analysis, and (2) determining the work done during compression from force--displacement data. These measurements were used to test whether the energy gained during launch was comparable to the work stored during compression in the presence of snap-through instability. 
 
-The purpose of this experiment was to analyze rubber jumping poppers as nonlinear elastic systems by (1) measuring maximum gravitational potential energy during launch using video analysis, and (2) determining the work done during compression from force--displacement data. These measurements were used to test whether the energy gained during launch was comparable to the work stored during compression in the presence of snap-through instability.
+Based on energy conservation, we hypothesize that the total mechanical work ($W$) done on the popper duing compression should be equal to both the initial kinetic energy ($\text{KE}_0$) on launch and the maximum gravitational potential energy ($\text{GPE}_f$) at the highest point of its flight. Alternatively, if loss mechanisms, such as nonlinear material properties, effects associated with snap-through instability, friction, and air drag, are large, then the kinetic and gravitational potential energies will be less than the mechanical work done:
+\begin{align}
+H_0: W &= \text{KE}_0 = \text{GPE}_f \\
+H_1: W &> \text{KE}_0 > \text{GPE}_f 
+\end{align}
 
-\subsection*{Hypotheses}
-\begin{itemize}
-    \item \textbf{Null ($H_0$):} The total mechanical work done on a popper during compression is approximately equal to the maximum gravitational potential energy gained by the popper during launch.
-    \item \textbf{Alternative ($H_a$):} The total mechanical work done on a popper during compression is not approximately equal to the maximum gravitational potential energy gained by the popper during launch.
-\end{itemize}
 
-\section{Methods and Materials}
-This experiment utilized three rubber Liberty Imports ``Jumping Gens'' poppers of different masses (Florham Park, NJ). These poppers included a heart-eyes emoji popper (mass \qty{0.0053}{\kilo\gram}), a crying emoji popper (mass \qty{0.0055}{\kilo\gram}), and a shocked emoji popper (mass \qty{0.0057}{\kilo\gram}). Motion during the launches was recorded using an iPhone 16 Pro Max (Apple; Cupertino, CA) positioned at a fixed distance of \qty{2.00}{\meter} from the launch point at \qty{60}{frame\per\second} with a resolution of 1080p. Force measurements were obtained using a Smart Weigh TOP2KG digital scale with a mechanical scissor jack, which controlled compression to each popper. Displacement during compression was measured with a metric ruler in centimeters and later converted to meters (SI units) for analysis due to the small size of the poppers. Video data were analyzed using Tracker (video motion tracking analysis software) to determine the maximum height reached in each trial, and all graphs and numerical analyses were generated using Python and Matplotlib. 
 
-\subsection{Methods for Energy Storage}
-Each popper was placed on a flat surface (the floor) and launched using a manual downward push, intended to be as consistent as possible across all trials. While the magnitude of the applied force could not be directly controlled or measured, care was taken to apply a similar force during each launch. Three trials were chosen for each popper to balance repeatability with time constraints, and averaging was used to reduce variability from manual launching. Each trial was recorded using an iPhone 16 Pro Max positioned perpendicular to the motion at a distance of \qty{2.00}{\meter}. A failed launch was defined as any trial in which the popper tipped, slid laterally, failed to fully invert, or did not produce a clear upward trajectory. Repeated trials were conducted to reduce the variability caused primarily by the manual push.
 
-Tracker software was used to extract maximum height data from video frames at \qty{60}{frame\per\second}. These measured heights were used to calculate the gravitational potential energy reached by each popper at the top of its motion.
 
-Maximum gravitational potential energy was calculated using:
-$$U_g = mgh$$
-where $m$ is the popper mass, $g = \qty{9.81}{\meter\per\second\squared}$, and $h$ is the measured maximum height. Variability in launch conditions was reflected in the spread of measured energies and accounted for in our discussion.
 
-\subsection{Methods for Force-Displacement Measurement of Work}
-To determine the work done by each popper, force-displacement measurements were obtained using a scissor jack and a digital scale. Each popper was placed between the scissor jack and the scale and compressed in increments of \qty{0.005}{\meter}. The force exerted by the popper (as read on the digital scale) was recorded at each displacement. Compression continued up until and slightly beyond snap-through instability occurred, indicated by a sudden decrease in measured force as the popper physically inverted.
 
-Force-displacement data were collected for the three respective poppers to provide reasonable average data. Initially, work was calculated using the formula $W = F \Delta X$; however, this was an inaccurate measurement because the force varied nonlinearly, causing an overestimate of work before snap-through instability and an underestimate of energy loss. Instead, work was calculated by numerically integrating the force-displacement data using the trapezoidal rule \cite{larson}, which estimates the area under the force-displacement curve without assuming linear elasticity. 
+
+\section{Methods and materials}
+This experiment utilized three toy poppers of different masses (``Jumping Gens''; Liberty Imports; Shenzhou, CN). These poppers included a heart-eyes emoji popper ($m=\qty{0.0053}{\kilo\gram}$), a crying emoji popper ($m=\qty{0.0055}{\kilo\gram}$), and a shocked emoji popper ($m=\qty{0.0057}{\kilo\gram}$). 
+
+\subsection{Launch kinematics and GPE}
+Motion during the launches was recorded using an iPhone 16 Pro Max (Apple; Cupertino, CA) positioned perpendicular at a fixed distance of \qty{2.00}{\meter} from the launch point, recording at \qty{60}{frame\per\second} with a resolution of 1080p.  A meterstick was placed in frame for scale. 
+
+Each popper was placed on a flat surface (the floor) and launched using a manual downward push, intended to be as consistent as possible across all trials. While the magnitude of the applied force could not be directly controlled or measured, care was taken to apply a similar force during each launch. Three trials were chosen for each popper to balance repeatability with time constraints, and averaging was used to reduce variability from manual launching. A failed launch was defined as any trial in which the popper tipped, slid laterally, failed to fully invert, or did not produce a clear upward trajectory. Repeated trials were conducted to reduce the variability caused primarily by the manual push.
+
+Video data were analyzed using Tracker \cite{tracker,renike:2024:kinematics} to determine the maximum height ($h$) reached in each trial. The measured heights were used to calculate the gravitational potential energy reached by each popper at the top of its motion according to:
+\begin{equation}
+\text{GPE}_f = mgh,
+\end{equation}
+where $m$ is mass, and $g=\qty{9.81}{\meter\per\second\squared}$. 
+
+Variability in launch conditions was reflected in the spread of measured energies and accounted for in our discussion. Subsequent graphs and statistical analyses were performed in Python using the \texttt{numpy} and \texttt{matplotlib} libraries \cite{numpy,matplotlib}.
+
+
+%\subsection{Mechanical work during compression of poppers}
+%Force measurements were obtained using a Smart Weigh TOP2KG digital scale with a mechanical scissor jack, %which controlled compression to each popper. Displacement during compression was measured with a metric %ruler in centimeters and later converted to meters (SI units) for analysis due to the small size of the %poppers.
+
+\subsection{Mechanical work during compression of poppers}
+To determine the work done in compressing each popper, force-displacement measurements were obtained using a standard laboratory scissor jack and a digital scale (TOP2KG; Smart Weigh; Zhongshan, CN). Each popper was placed between the scissor jack and the scale and compressed in increments of \qty{0.005}{\meter}. The force exerted by the popper (as read on the digital scale, converted according to $F=mg$) was recorded at each displacement. Compression continued up until and slightly beyond snap-through instability occurred, indicated by a sudden decrease in measured force as the popper physically inverted.
+
+Force-displacement data were collected for the three respective poppers to provide reasonable average data. %Initially, work was calculated using the formula $W = F \Delta X$; however, this was an inaccurate measurement because the force varied nonlinearly, causing an overestimate of work before snap-through instability and an underestimate of energy loss. Instead, 
+Work was calculated by numerically integrating the force-displacement data using the trapezoidal rule \cite{calculus}, which estimates the area under the force-displacement curve without assuming linear elasticity. 
+
+
 
 
 
@@ -120,55 +139,65 @@ Force-displacement data were collected for the three respective poppers to provi
 \section{Results}
 
 \begin{figure}
-    \centering
-    \includesvg[width=\linewidth]{graph_1_force_vs_displacement}
-    \caption{Compressional displacement vs. elastic force for all three poppers.}
-    \label{fig:1}
+\begin{center}
+\includesvg[width=\columnwidth]{graph_1_force_vs_displacement}
+\end{center}
+\caption{Compressional displacement vs. elastic force for all three poppers.}
+\label{fig:1}
 \end{figure}
 
 The graph shown in \cref{fig:1} shows a roughly linear relationship between the elastic force of all of the poppers and the compressional displacement up until it reaches the snap-through instability point, which can be seen at the peak of the graph, after which the relationship trends downwards due to the conical nature of the popper’s spring. From the experimental results, we can see that the force of the heart-face popper remains consistently higher than the shocked-face popper, indicating that the heart-face popper exhibited greater effective stiffness over the initial compression range. The same trend applies to the shocked-face popper compared to the crying-face popper. From this, we can conclude that the heart-face popper has the highest elastic stiffness of all three poppers. Furthermore, we can conclude that the snap-through instability point occurs at a compression of approximately \qty{0.03}{\meter}, as indicated in \cref{fig:1}.
 
 \begin{figure}
-    \centering
-    \includesvg[width=\linewidth]{graph_2_1_avg_max_pe}
-    \caption{Average maximum gravitational potential energy for all three poppers (\unit{\joule}).}
-    \label{fig:2.1}
+\begin{center}
+\includesvg[width=\linewidth]{graph_2_1_avg_max_pe}
+\end{center}
+\caption{Average maximum gravitational potential energy for all three poppers (\unit{\joule}).}
+\label{fig:2.1}
 \end{figure}
 
 \begin{figure}
-    \centering
-    \includesvg[width=\linewidth]{graph_2_2_trial_max_pe}
-    \caption{Per-trial maximum gravitational potential energy for all three poppers (\unit{\joule}).}
-    \label{fig:2.2}
+\begin{center}
+\includesvg[width=\linewidth]{graph_2_2_trial_max_pe}
+\end{center}
+\caption{Per-trial maximum gravitational potential energy for all three poppers (\unit{\joule}).}
+\label{fig:2.2}
 \end{figure}
 
-Video analysis was used to determine the maximum height reached by each popper in each trial. Using these measured heights, the poppers’ maximum gravitational potential energy was calculated, resulting in average values of \qty{0.0781}{\joule} for the heart-eyes popper, \qty{0.0764}{\joule} for the shocked popper, and \qty{0.0611}{\joule} for the crying popper, as shown in \cref{fig:2.1,fig:2.2}. Individual trials showed variation due primarily to differences in manual launch force, but the heart-eyes and shocked poppers consistently reached slightly higher launch energies than the crying popper.
+Video analysis was used to determine the maximum height reached by each popper in each trial. Using these measured heights, the poppers’ maximum gravitational potential energy was calculated, resulting in average values of \qty{0.0781}{\joule} for the heart-eyes popper, \qty{0.0764}{\joule} for the shocked popper, and \qty{0.0611}{\joule} for the crying popper, as shown in \cref{fig:2.1,fig:2.2}. Individual trials showed variation due primarily to differences in manual launch force, but the heart-eyes and shocked poppers \textbf{consistently reached slightly higher launch energies than the crying popper (STATS???).}
 
-Work calculated from force-displacement integration was greater than the maximum gravitational potential energy measured from video analysis for all three poppers, as shown in \cref{fig:3}. This indicates that the two methods did not produce close quantitative agreement under the conditions of this experiment.
-
+Work calculated from force-displacement integration was greater than the maximum gravitational potential energy measured from video analysis for all three poppers, as shown in \cref{fig:3}. \textbf{This indicates that the two methods did not produce close quantitative agreement under the conditions of this experiment (STATS???)}.
 \begin{figure}
-    \centering
-    \includesvg[width=\linewidth]{graph_3_work_vs_launch_pe}
-    \caption{Comparison of work done during compression and maximum gravitational potential energy gained during launch.}
-    \label{fig:3}
+\begin{center}
+\includesvg[width=\linewidth]{graph_3_work_vs_launch_pe}
+\end{center}
+\caption{Comparison of work done during compression and maximum gravitational potential energy gained during launch.}
+\label{fig:3}
 \end{figure}
+
+
+
 
 
 
 
 
 \section{Discussion}
-The results of this experiment demonstrate that elastic jumping poppers store mechanical energy during compression and release this energy through snap-through instability during launch. Video analysis showed that each popper gained measurable gravitational potential energy during flight, while force--displacement measurements revealed nonlinear elastic behavior that cannot be accurately modeled using Hooke’s Law ($F = kx$, where force is proportional to displacement in linear elastic systems) alone. Although variability was introduced by manually applied launch forces and measurement uncertainty, repeated trials and averaging produced consistent trends across all poppers. However, the work values obtained from force--displacement integration were significantly larger than the maximum gravitational potential energy values measured from launch height. This lack of close agreement suggests either substantial energy losses, overestimations, or both. Therefore, while the experiment clearly demonstrated elastic energy storage and release, it did not support the null hypothesis that work done during compression is approximately equal to the mechanical energy gained during launch.
+The results of this experiment demonstrate that elastic jumping poppers store mechanical energy during compression and release this energy through snap-through instability during launch. Video analysis showed that each popper gained measurable gravitational potential energy during flight, while force--displacement measurements revealed nonlinear elastic behavior that cannot be accurately modeled using Hooke’s Law ($F = kx$, where force is proportional to displacement in linear elastic systems) alone. Although variability was introduced by manually applied launch forces and measurement uncertainty, repeated trials and averaging produced consistent trends across all poppers \textbf{STATS}. 
 
-Variability in measured energy values is primarily due to the use of a manual launch force, which could not be directly controlled or measured. However, repeated trials and averaging helped reduce this variability and revealed consistent overall trends. The experiment successfully demonstrated that poppers can be analyzed as elastic systems using energy methods, while also highlighting the limitations of assuming close quantitative agreement between compression work and measured launch energy in a real nonlinear system. These results indicate that poppers can be effectively modeled using energy concepts, while also emphasizing the effects of experimental uncertainty and non-ideal energy transfer.
+However, the work values obtained from force--displacement integration were \textbf{significantly larger STATS} than the maximum gravitational potential energy values measured from launch height. This lack of close agreement suggests either substantial energy losses, overestimations, or both. Therefore, while the experiment clearly demonstrated elastic energy storage and release, it did not support the null hypothesis that work done during compression is approximately equal to the mechanical energy gained during launch.
 
+\textbf{EXPLAIN WHY ALTERNATIVE MIGHT BE SUPPORTED. SNAP THROUGH INSTABILITY AND FRICTION DURING LAUNCH PROCESS, MATERIAL NONLINEARITY. VERSUS AIR DRAG. PEVZNER ET AL SAYS AIR DRAG IS SMALLISH. DOES FRICTION DURING LAUNCH PROCESS, MATERIAL NONLINEARITY IN FORM OF COEFFICIENT OF RESTITUTION, AND NONLINEAR EFFECTS OF SNAP THROUGH ACCOUNT FOR 50\% LOSS (THEY MULTIPLY TOGETHER...)}
 
+Variability in measured energy values is primarily due to the use of a manual launch force, which could not be directly controlled or measured. However, repeated trials and averaging helped reduce this variability and revealed consistent overall trends. The experiment successfully demonstrated that poppers can be analyzed as elastic systems using energy methods, while also highlighting the limitations of assuming close quantitative agreement between mechanical work during compression and measured launch energy in a real nonlinear system. These results indicate that poppers can be effectively modeled using energy concepts, while also emphasizing the effects of experimental uncertainty and non-ideal energy transfer.
+
+\textbf{HEART SHOCKED CRYING?}
 
 
 
 
 \section{Acknowledgements}
-The development and execution of this experiment benefited from the supervision of the Period 1 AP Physics C: Mechanics Class, which provided guidance and feedback on the experimental design and data analysis. BD was responsible for experimental setup, data collection, data organization, and the verification of graphs and calculations. AL was responsible for verifying results, drafting results and conclusions, and incorporating necessary revisions. IS was the primary author of the abstract, introduction, and discussion sections, and was responsible for conceptual framing, verification of data and measurements, and the generation and validation of major graphs and calculations. AD assisted in data collection from video analyses. We would like to acknowledge our teacher and our peers for their collaboration in collecting and verifying measurements, assembling the necessary materials, and contributing to the accuracy and reliability of the results.
+BD was responsible for experimental setup, data collection, data organization, and the verification of graphs and calculations. AL was responsible for verifying results, drafting results and conclusions, and incorporating necessary revisions. IS was the primary author of the abstract, introduction, and discussion sections, and was responsible for conceptual framing, verification of data and measurements, and the generation and validation of major graphs and calculations. AD assisted in data collection from video analyses. We thank several anonymous peer reviewers and we thank our classmates for their collaboration in collecting and verifying measurements, assembling the necessary materials, and contributing to the accuracy and reliability of the results.
 
 
 
@@ -177,7 +206,7 @@ The development and execution of this experiment benefited from the supervision 
 
 
 
-\bibliography{example.bib}
+\bibliography{lab.bib}
 %References
 %[1] P.A. Tipler and G. Mosca. Physics for Scientists and Engineers, 5th ed. (W H Freeman and Company, New York, 2004).
 %
