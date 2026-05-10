@@ -20,6 +20,9 @@
 \crefname{table}{Table}{Tables}
 \usepackage{svg}
 \svgpath{{./figures}}
+\makeatletter
+\def\blfootnote{\xdef\@thefnmark{}\@footnotetext}
+\makeatother
 
 
 
@@ -46,7 +49,8 @@ pdfauthor={Ishaan Sharma, Blaise DeMairo, Alexander Liddawi, and Andrew Dolgin},
 \fancyhf{}
 \fancyhead[C]{Journal of Science \& Engineering \textbf{2}, 93--97 (2026)} % FOR EDITOR ONLY
 \fancyfoot[C]{\thepage}
-\fancyfoot[L]{\scriptsize\copyright\ 2026 Journal of Science \& Engineering, \href{https://creativecommons.org/licenses/by-nc/4.0/}{CC-BY-NC 4.0}}
+%\fancyfoot[L]{\scriptsize\copyright\ 2026 Journal of Science \& Engineering, \href{https://creativecommons.org/licenses/by-nc/4.0/}{CC-BY-NC 4.0}}
+\fancyfoot[L]{\scriptsize\copyright\ 2026 J S\&E \href{https://creativecommons.org/licenses/by-nc/4.0/}{CC-BY-NC 4.0}}
 }
 
 
@@ -64,8 +68,9 @@ pdfauthor={Ishaan Sharma, Blaise DeMairo, Alexander Liddawi, and Andrew Dolgin},
 % For S&E authors
 \affiliation{Science \& Engineering Magnet Program, \href{https://manalapan.frhsd.com/}{Manalapan High School}, Englishtown, NJ 07726 USA}
 %\date{\today}
-\date{Received x; revised x; accepted x}
-\published{13 May 2026}
+\received{31 January 2026}
+\accepted[accepted~]{28 March 2026}
+\published[published~]{13 May 2026}
 
 
 % AUTHORS PUT YOUR MANUSCRIPT IN BELOW HERE
@@ -82,6 +87,7 @@ This experiment investigated energy storage and work done in elastic jumping pop
 \keywords{kinematics, pop, time series}
 
 \maketitle\thispagestyle{mytitlepage}
+\blfootnote{\\\emph{Published by the Journal of Science \& Engineering under the terms of the \href{https://creativecommons.org/licenses/by-nc/4.0/}{Creative Commons Attribution-NonCommercial 4.0 International} license. Further distribution of this work must maintain attribution to the author(s) and the published article's title, journal citation, and DOI.}}
 
 %The current column width is \the\columnwidth
 
