@@ -116,14 +116,14 @@ H_1: W &> \text{KE}_0 > \text{GPE}_f
 
 
 \section{Methods and materials}
-This experiment utilized three toy poppers of different masses (``Jumping Gens''; Liberty Imports; Shenzhou, CN). These poppers included a heart-eyes emoji popper ($m=\qty{0.0053}{\kilo\gram}$), a crying emoji popper ($m=\qty{0.0055}{\kilo\gram}$), and a shocked emoji popper ($m=\qty{0.0057}{\kilo\gram}$). 
+This experiment utilized three toy poppers of different masses (``Jumping Gens''; Liberty Imports; Allentown, PA). These poppers included a heart-eyes emoji popper ($m=\qty{0.0053}{\kilo\gram}$), a crying emoji popper ($m=\qty{0.0055}{\kilo\gram}$), and a shocked emoji popper ($m=\qty{0.0057}{\kilo\gram}$). 
 
 \subsection{Launch kinematics and GPE}
 Motion during the launches was recorded using an iPhone 16 Pro Max (Apple; Cupertino, CA) positioned perpendicular at a fixed distance of \qty{2.00}{\meter} from the launch point, recording at \qty{60}{frame\per\second} with a resolution of 1080p.  A meterstick was placed in frame for scale. 
 
 Each popper was placed on a flat surface (the floor) and launched using a manual downward push, intended to be as consistent as possible across all trials. While the magnitude of the applied force could not be directly controlled or measured, care was taken to apply a similar force during each launch. Three trials were chosen for each popper to balance repeatability with time constraints, and averaging was used to reduce variability from manual launching. A failed launch was defined as any trial in which the popper tipped, slid laterally, failed to fully invert, or did not produce a clear upward trajectory. Repeated trials were conducted to reduce the variability caused primarily by the manual push.
 
-Video data were analyzed using Tracker \cite{tracker,renike:2024:kinematics} to determine the maximum height ($h$) reached in each trial. Digitization proceeded similar to \cite{levine:2026:acceleration,dakwale:2026:effect,sharma:2026:analyzing,ahmadzada:2026:downward,hallur:2026:objects,brunie:2026:testing}. The measured heights were used to calculate the gravitational potential energy reached by each popper at the top of its motion according to:
+Video data were analyzed using Tracker \cite{tracker,renika:2024:kinematics} to determine the maximum height ($h$) reached in each trial. Digitization proceeded similar to \cite{levine:2026:acceleration,dakwale:2026:effect,sharma:2026:analyzing,ahmadzada:2026:downward,hallur:2026:objects,brunie:2026:testing}. The measured heights were used to calculate the gravitational potential energy reached by each popper at the top of its motion according to:
 \begin{equation}
 \text{GPE}_f = mgh,
 \end{equation}
@@ -136,7 +136,7 @@ Variability in launch conditions was reflected in the spread of measured energie
 %Force measurements were obtained using a Smart Weigh TOP2KG digital scale with a mechanical scissor jack, %which controlled compression to each popper. Displacement during compression was measured with a metric %ruler in centimeters and later converted to meters (SI units) for analysis due to the small size of the %poppers.
 
 \subsection{Mechanical work during compression of poppers}
-To determine the work done in compressing each popper, force-displacement measurements were obtained using a standard laboratory scissor jack and a digital scale (TOP2KG; Smart Weigh; Zhongshan, CN). Each popper was placed between the scissor jack and the scale and compressed in increments of \qty{0.005}{\meter}. The force exerted by the popper (as read on the digital scale, converted according to $F=mg$) was recorded at each displacement. Compression continued up until and slightly beyond snap-through instability occurred, indicated by a sudden decrease in measured force as the popper physically inverted.
+To determine the work done in compressing each popper, force-displacement measurements were obtained using a standard laboratory scissor jack and a digital scale (TOP2KG; Smart Weigh; Jiangsu, China). Each popper was placed between the scissor jack and the scale and compressed in increments of \qty{0.005}{\meter}. The force exerted by the popper (as read on the digital scale, converted according to $F=mg$) was recorded at each displacement. Compression continued up until and slightly beyond snap-through instability occurred, indicated by a sudden decrease in measured force as the popper physically inverted.
 
 Force-displacement data were collected for the three respective poppers to provide reasonable average data. %Initially, work was calculated using the formula $W = F \Delta X$; however, this was an inaccurate measurement because the force varied nonlinearly, causing an overestimate of work before snap-through instability and an underestimate of energy loss. Instead, 
 Work was calculated by numerically integrating the force-displacement data using the trapezoidal rule \cite{calculus,numpy,scipy}, which estimates the area under the force-displacement curve without assuming linear elasticity. 
